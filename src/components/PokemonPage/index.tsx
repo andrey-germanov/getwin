@@ -5,9 +5,9 @@ import { useDispatch } from "react-redux";
 import { pokemonSelector } from "../../store/pokemonsReducer";
 import { useSelector } from "react-redux";
 import { fetchPokemon } from "../../store/asyncActions/pokemon";
-import { Loading } from "../Loading";
 import { IPokemon } from "../../types/pokemonType";
 import s from "./Pokemon.module.scss";
+import { Spin } from "antd";
 
 export const PokemonPage = () => {
   const { name } = useParams();
@@ -25,7 +25,7 @@ export const PokemonPage = () => {
     return (
       <div className={s.pokemonPage}>
         {pokemon === null || pokemon.name !== name ? (
-          <Loading />
+          <Spin size="large" />
         ) : (
           <>
             <img src={pokemon.sprites.front_default} alt="" />

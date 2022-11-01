@@ -18,10 +18,16 @@
     width: 150px;
     border: 0.5px solid rgb(75, 74, 74);
     padding: 10px;
+    display: flex;
+    flex-direction: column;
   }
   input {
     margin-top: 20px;
     width: 200px;
     border: 0.5px solid rgb(91, 89, 89);
+  }
+  .types {
+    display: flex;
+    gap: 5px;
   }
 }

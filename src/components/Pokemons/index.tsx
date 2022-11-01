@@ -11,8 +11,7 @@ import {
 import { fetchPokemons } from "../../store/asyncActions/pokemons";
 import { IPokemons } from "../../types/pokemonsType";
 import { stripValue } from "../../utils";
-import { Button, Input } from "antd";
-import { Loading } from "../Loading";
+import { Button, Input, Skeleton } from "antd";
 import s from "./Pokemons.module.scss";
 import { Pokemon } from "./Pokemon";
 
@@ -55,6 +54,7 @@ export const Pokemons = () => {
       return <Pokemon key={item.name} name={item.name} />;
     });
   };
+
   const pagination = () => {
     return (
       <div>
@@ -73,7 +73,7 @@ export const Pokemons = () => {
     <div className={s.wrapperListPokemons}>
       <Input type="text" onChange={(e) => handlerChange(e)} />
       <div className={s.listPokemons}>
-        {loading ? <Loading /> : renderPokemon(pokemonsToShow)}
+        {loading ? <Skeleton active /> : renderPokemon(pokemonsToShow)}
       </div>
       {pagination()}
     </div>
