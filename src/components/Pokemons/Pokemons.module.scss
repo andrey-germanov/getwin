@@ -1,0 +1,27 @@
+.wrapperListPokemons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  .listPokemons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .pageNumber {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  a {
+    font-size: 18px;
+    width: 150px;
+    border: 0.5px solid rgb(75, 74, 74);
+    padding: 10px;
+  }
+  input {
+    margin-top: 20px;
+    width: 200px;
+    border: 0.5px solid rgb(91, 89, 89);
+  }
+}

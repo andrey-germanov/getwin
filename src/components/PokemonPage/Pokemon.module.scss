@@ -1,0 +1,27 @@
+.pokemonPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .moves, .stats{
+    height: 200px;
+    width: max-content;
+    overflow: scroll;
+    border: .5px solid black;
+  }
+  .pokemonInfo{
+    display: flex;
+    gap: 20px;
+    >div{
+      >div{
+        padding: 5px;
+      }
+      h1{
+        text-align: center;
+      }
+    }
+  }
+  img{
+    width: 200px;
+  }
+}
